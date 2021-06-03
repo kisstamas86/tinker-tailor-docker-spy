@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nine men's morris</title>
+    <!-- http://proger.i-forge.net/The_smallest_transparent_pixel/ -->
+    <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
+</head>
+<body>
+<div class="head">
+    <div class="player_name_1">Player1</div>
+    <div> </div>
+    <div class="message">Good luck!</div>
+    <div> </div>
+    <div class="player_name_2">Player2</div>
+    <div> </div>
+</div>
+<div class="gameboard">
+<div class="player1_container">
+    <span class="disc_1" draggable="true"></span>
+    <span class="disc_1" draggable="true"></span>
+    <span class="disc_1" draggable="true"></span>
+    <span class="disc_1" draggable="true"></span>
+    <span class="disc_1" draggable="true"></span>
+    <span class="disc_1" draggable="true"></span>
+    <span class="disc_1" draggable="true"></span>
+    <span class="disc_1" draggable="true"></span>
+    <span class="disc_1" draggable="true"></span>
+</div>
+<div class="board">
+    <div class="cell" data-square="a" data-point="1"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="a" data-point="2"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="a" data-point="3"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="cell" data-square="b" data-point="1"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="b" data-point="2"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="b" data-point="3"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="cell" data-square="c" data-point="1"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="c" data-point="2"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="c" data-point="3"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="cell" data-square="a" data-point="8"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="b" data-point="8"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="c" data-point="8"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="cell" data-square="c" data-point="4"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="b" data-point="4"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="a" data-point="4"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="cell" data-square="c" data-point="7"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="c" data-point="6"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="c" data-point="5"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="cell" data-square="b" data-point="7"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="b" data-point="6"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="b" data-point="5"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank_vertical"></div>
+    <div class="cell" data-square="a" data-point="7"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="a" data-point="6"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="blank_horizontal"></div>
+    <div class="cell" data-square="a" data-point="5"></div>
+</div>
+<div class="player2_container">
+    <span class="disc_2" draggable="true"></span>
+    <span class="disc_2" draggable="true"></span>
+    <span class="disc_2" draggable="true"></span>
+    <span class="disc_2" draggable="true"></span>
+    <span class="disc_2" draggable="true"></span>
+    <span class="disc_2" draggable="true"></span>
+    <span class="disc_2" draggable="true"></span>
+    <span class="disc_2" draggable="true"></span>
+    <span class="disc_2" draggable="true"></span>
+</div>
+</div>
+<div class="menu">
+    <form action="{{ url_for('index') }}">
+        <button type="submit">Back to menu</button>
+    </form>
+    <button onclick="surrender()">Surrender</button>
+</div>
+</body>
+</html>

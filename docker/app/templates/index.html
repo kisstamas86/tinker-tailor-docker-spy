@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mill</title>
+    <!-- http://proger.i-forge.net/The_smallest_transparent_pixel/ -->
+    <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
+</head>
+<body>
+    <p>Choose a game mode:
+        <select name="mode" id="mode" onchange="askPlayerColor(this.value)">
+            <option value="single">Single Player</option>
+            <option value="multi">Multiplayer</option>
+        </select>
+    </p>
+
+<form action="{{ url_for('game') }}" id="playerData" method="GET" class="invisible">
+    <fieldset>
+        <label for="player_1">Player 1:</label><br>
+        <input type="text" id="player_1" name="player_1" placeholder="John" required>
+        <label for="color_player_1">Color:</label>
+        <select name="color_player_1" id="color_player_1" onchange="this.style.backgroundColor=this.value">
+            <option value="lightskyblue">Blue</option>
+            <option value="crimson">Red</option>
+            <option value="saddlebrown">Brown</option>
+            <option value="lawngreen">Green</option>
+        </select>
+    </fieldset>
+
+    <fieldset id="choose_player_2">
+        <label for="player_2">Player 2:</label><br>
+        <input type="text" id="player_2" name="player_2" placeholder="Mike" required>
+        <label for="color_player_2">Color:</label>
+        <select name="color_player_2" id="color_player_2" onchange="this.style.backgroundColor=this.value">
+            <option value="crimson">Red</option>
+            <option value="lightskyblue">Blue</option>
+            <option value="saddlebrown">Brown</option>
+            <option value="lawngreen">Green</option>
+        </select>
+    </fieldset>
+
+    <input type="submit" id="colorSubmit" value="Start" onclick="activateStartButton()"/>
+</form>
+</body>
+</html>
